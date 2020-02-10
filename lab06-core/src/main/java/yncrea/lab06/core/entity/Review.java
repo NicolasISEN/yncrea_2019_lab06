@@ -7,7 +7,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import java.util.Date;
 
-// TODO complete this implementation with the correct annotations, fields and methods.
 public class Review implements Comparable<Review> {
 
     @Column(name="score")

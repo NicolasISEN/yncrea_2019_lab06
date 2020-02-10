@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.CascadeType;
 import javax.persistence.OneToMany;
 import java.util.List;
-// TODO complete this implementation with the correct annotations, fields and methods.
 // The @JsonIgnoreProperties annotation is mandatory in our case because it helps the JSON Serialization
 
 @JsonIgnoreProperties({ "books" })

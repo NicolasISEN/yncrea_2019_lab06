@@ -2,7 +2,6 @@ package yncrea.lab06.core.entity;
 
 import javax.persistence.*;
 import java.util.Set;
-// TODO complete this implementation with the correct annotations, fields and methods.
 // The @ManyToMany annotation is provided because it is not that easy ;)
 // Another @ManyToMany annotation is needed !
 // Hint : https://www.baeldung.com/jpa-many-to-many
@@ -13,7 +12,6 @@ public class Book implements Comparable<Book> {
     @Column(name="title")
     private String title;
 
-    //TODO annotate this field in order to inject the value of the enumeration as a string in the DB.
     @ManyToOne
     private Language language;
 

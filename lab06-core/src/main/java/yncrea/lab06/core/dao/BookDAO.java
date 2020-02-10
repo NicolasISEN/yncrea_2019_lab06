@@ -5,7 +5,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import yncrea.lab06.core.entity.Book;
 
-//TODO complete this class
 public interface BookDAO  extends JpaRepository<Book,Long> {
 
 

@@ -11,7 +11,6 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration.Dynamic;
 
 
-//TODO complete the implementation of this class. Take a look at lab05 !
 public class Initializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
