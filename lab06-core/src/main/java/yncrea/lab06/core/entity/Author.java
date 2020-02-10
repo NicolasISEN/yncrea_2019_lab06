@@ -2,8 +2,7 @@ package yncrea.lab06.core.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import javax.persistence.Column;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.List;
 
 // The @JsonIgnoreProperties annotation is mandatory in our case because it helps the JSON Serialization
@@ -12,6 +11,9 @@ import java.util.List;
 @JsonIgnoreProperties({ "books" })
 public class Author implements Comparable<Author> {
 
+    @Id()
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    int id;
 
     @Column(name = "firstname")
     private String firstname;

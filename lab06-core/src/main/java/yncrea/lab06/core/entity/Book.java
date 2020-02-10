@@ -9,6 +9,10 @@ import java.util.Set;
 
 public class Book implements Comparable<Book> {
 
+    @Id()
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    int id;
+
     @Column(name="title")
     private String title;
 

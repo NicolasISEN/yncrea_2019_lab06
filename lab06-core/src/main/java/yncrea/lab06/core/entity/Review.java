@@ -2,12 +2,15 @@ package yncrea.lab06.core.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.persistence.Column;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Date;
 
 public class Review implements Comparable<Review> {
+
+    @Id()
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    int id;
+
 
     @Column(name="score")
     private int score;
