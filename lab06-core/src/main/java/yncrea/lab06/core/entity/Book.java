@@ -1,8 +1,6 @@
 package yncrea.lab06.core.entity;
 
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.Set;
 // TODO complete this implementation with the correct annotations, fields and methods.
 // The @ManyToMany annotation is provided because it is not that easy ;)
@@ -12,9 +10,11 @@ import java.util.Set;
 
 public class Book implements Comparable<Book> {
 
+    @Column(name="title")
     private String title;
 
     //TODO annotate this field in order to inject the value of the enumeration as a string in the DB.
+    @ManyToOne
     private Language language;
 
     @ManyToMany
@@ -24,10 +24,13 @@ public class Book implements Comparable<Book> {
             inverseJoinColumns = @JoinColumn(name = "author_id"))
     private Set<Author> authors;
 
+    @Column(name="image")
     private String image;
 
+    @OneToMany(cascade = CascadeType.ALL)
     private Set<Tag> tags;
 
+    @OneToMany(cascade = CascadeType.ALL)
     private Set<Review> reviews;
 
 

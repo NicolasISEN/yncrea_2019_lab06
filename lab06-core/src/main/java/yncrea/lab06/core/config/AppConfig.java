@@ -12,7 +12,6 @@ import java.util.Properties;
 @Configuration
 @ComponentScan(basePackages = "yncrea.lab06.core.service")
 public class AppConfig {
-    //TODO Remember lab05 ?
     @Bean
     public Properties dbProperties() throws IOException {
         Properties props = new Properties();

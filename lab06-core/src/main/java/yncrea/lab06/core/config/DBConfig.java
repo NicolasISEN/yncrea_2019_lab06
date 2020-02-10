@@ -20,7 +20,6 @@ import java.sql.SQLException;
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "yncrea.lab06.core.dao")
 public class DBConfig {
-    //TODO Remember lab05 ?
     @Bean(destroyMethod = "close")
     public DataSource dataSource(HikariConfig dbConfiguration) {
         return new HikariDataSource(dbConfiguration);
